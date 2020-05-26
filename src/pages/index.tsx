@@ -1,10 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import styles from './index.less';
 
-import { Layout, Row, Col } from 'antd';
-
+import { history } from 'umi';
+import { Layout, Row, Col, Card } from 'antd';
 import { UnorderedListOutlined } from '@ant-design/icons';
-import { Card } from 'antd';
 
 const { Meta } = Card;
 
@@ -26,7 +25,7 @@ class BasicLayout extends Component {
               color: '#FFF',
             }}
           >
-            <Row>
+            <Row type="flex">
               <Col span={22}>Prudential招聘(深圳)</Col>
               <Col span={2}>
                 <UnorderedListOutlined />
@@ -35,7 +34,7 @@ class BasicLayout extends Component {
           </Header>
           <Content style={{ margin: '10px 0px 0' }}>
             <iframe
-              frameborder="0"
+              frameBorder="0"
               src="https://v.qq.com/txp/iframe/player.html?vid=v0963nv6eq8"
               id="video"
               width="100%"
@@ -52,39 +51,89 @@ class BasicLayout extends Component {
               <Col span={6}>
                 <Card
                   hoverable
+                  bordered={false}
                   style={{}}
-                  cover={<img alt="" src={require('../assets/icon1.png')} />}
+                  cover={
+                    <img
+                      alt=""
+                      src={require('../assets/icon1.png')}
+                      onClick={() => history.push('/positionDetails?code=1')}
+                    />
+                  }
                 >
-                  <Meta title="Frontend Engineer(Web)" />
-                  {/* <div className={styles.textAutoBreak}>Frontend Engineer(Web)</div> */}
+                  <Meta
+                    title={
+                      <div className={styles.titleTextFormat}>
+                        Frontend Engineer (Web)
+                      </div>
+                    }
+                  />
                 </Card>
               </Col>
               <Col span={6}>
                 <Card
                   hoverable
+                  bordered={false}
                   style={{}}
-                  cover={<img alt="" src={require('../assets/icon2.png')} />}
+                  cover={
+                    <img
+                      alt=""
+                      src={require('../assets/icon2.png')}
+                      onClick={() => history.push('/positionDetails?code=2')}
+                    />
+                  }
                 >
-                  <Meta title="Backend Engineer" />
-                  {/* <div className={styles.textAutoBreak}>Backend Engineer</div> */}
+                  <Meta
+                    title={
+                      <div className={styles.titleTextFormat}>
+                        Backend Engineer
+                      </div>
+                    }
+                  />
                 </Card>
               </Col>
               <Col span={6}>
                 <Card
                   hoverable
+                  bordered={false}
                   style={{}}
-                  cover={<img alt="" src={require('../assets/icon3.png')} />}
+                  cover={
+                    <img
+                      alt=""
+                      src={require('../assets/icon3.png')}
+                      onClick={() => history.push('/positionDetails?code=3')}
+                    />
+                  }
                 >
-                  <Meta title="Software Architect" />
+                  <Meta
+                    title={
+                      <div className={styles.titleTextFormat}>
+                        Software Architect
+                      </div>
+                    }
+                  />
                 </Card>
               </Col>
               <Col span={6}>
                 <Card
                   hoverable
+                  bordered={false}
                   style={{}}
-                  cover={<img alt="" src={require('../assets/icon4.png')} />}
+                  cover={
+                    <img
+                      alt=""
+                      src={require('../assets/icon4.png')}
+                      onClick={() => history.push('/positionDetails?code=4')}
+                    />
+                  }
                 >
-                  <Meta title="Devops Engineer" />
+                  <Meta
+                    title={
+                      <div className={styles.titleTextFormat}>
+                        Devops Engineer
+                      </div>
+                    }
+                  />
                 </Card>
               </Col>
             </Row>
@@ -92,37 +141,82 @@ class BasicLayout extends Component {
               <Col span={6}>
                 <Card
                   hoverable
+                  bordered={false}
                   style={{}}
-                  cover={<img alt="" src={require('../assets/icon5.png')} />}
+                  cover={
+                    <img
+                      alt=""
+                      src={require('../assets/icon5.png')}
+                      onClick={() => history.push('/positionDetails?code=5')}
+                    />
+                  }
                 >
-                  <Meta title="Frontend Engineer(App)" />
+                  <Meta
+                    title={
+                      <div className={styles.titleTextFormat}>
+                        Frontend Engineer (App)
+                      </div>
+                    }
+                  />
                 </Card>
               </Col>
               <Col span={6}>
                 <Card
                   hoverable
+                  bordered={false}
                   style={{}}
-                  cover={<img alt="" src={require('../assets/icon6.png')} />}
+                  cover={
+                    <img
+                      alt=""
+                      src={require('../assets/icon6.png')}
+                      onClick={() => history.push('/positionDetails?code=6')}
+                    />
+                  }
                 >
-                  <Meta title="QA Engineer" />
+                  <Meta
+                    title={
+                      <div className={styles.titleTextFormat}>QA Engineer</div>
+                    }
+                  />
                 </Card>
               </Col>
               <Col span={6}>
                 <Card
                   hoverable
+                  bordered={false}
                   style={{}}
                   cover={<img alt="" src={require('../assets/icon7.png')} />}
+                  onClick={() => history.push('/positionDetails?code=7')}
                 >
-                  <Meta title="Product Manager" />
+                  <Meta
+                    title={
+                      <div className={styles.titleTextFormat}>
+                        Product Manager
+                      </div>
+                    }
+                  />
                 </Card>
               </Col>
               <Col span={6}>
                 <Card
                   hoverable
+                  bordered={false}
                   style={{}}
-                  cover={<img alt="" src={require('../assets/icon8.png')} />}
+                  cover={
+                    <img
+                      alt=""
+                      src={require('../assets/icon8.png')}
+                      onClick={() => history.push('/positionDetails?code=8')}
+                    />
+                  }
                 >
-                  <Meta title="Frontend Leader" />
+                  <Meta
+                    title={
+                      <div className={styles.titleTextFormat}>
+                        Frontend Leader
+                      </div>
+                    }
+                  />
                 </Card>
               </Col>
             </Row>
@@ -130,19 +224,45 @@ class BasicLayout extends Component {
               <Col span={6}>
                 <Card
                   hoverable
+                  bordered={false}
                   style={{}}
-                  cover={<img alt="" src={require('../assets/icon9.png')} />}
+                  cover={
+                    <img
+                      alt=""
+                      src={require('../assets/icon9.png')}
+                      onClick={() => history.push('/positionDetails?code=9')}
+                    />
+                  }
                 >
-                  <Meta title="Market Specialist" />
+                  <Meta
+                    title={
+                      <div className={styles.titleTextFormat}>
+                        Market Specialist
+                      </div>
+                    }
+                  />
                 </Card>
               </Col>
               <Col span={6}>
                 <Card
                   hoverable
+                  bordered={false}
                   style={{}}
-                  cover={<img alt="" src={require('../assets/icon10.png')} />}
+                  cover={
+                    <img
+                      alt=""
+                      src={require('../assets/icon10.png')}
+                      onClick={() => history.push('/positionDetails?code=10')}
+                    />
+                  }
                 >
-                  <Meta title="Trainee & Intern" />
+                  <Meta
+                    title={
+                      <div className={styles.titleTextFormat}>
+                        Trainee & Intern
+                      </div>
+                    }
+                  />
                 </Card>
               </Col>
             </Row>
@@ -150,7 +270,7 @@ class BasicLayout extends Component {
               {this.props.children}
               About Us
             </div>
-            <body style={{ padding: 12, background: '#FFF', color: '#000' }}>
+            <div style={{ padding: 12, background: '#FFF', color: '#000' }}>
               Founded in 1848, Prudential plc is an Asia-led portfolio of
               businesses focused on structural growth markets. The business
               helps individuals to de-risk their lives and deal with their
@@ -173,7 +293,7 @@ class BasicLayout extends Component {
               millions of customers we serve every day. We are impact driven and
               look for new ways to solve challenging business and operational
               problems.
-            </body>
+            </div>
 
             <div style={{ padding: 12, background: '#F5F5F5', color: '#000' }}>
               {this.props.children}
@@ -184,7 +304,7 @@ class BasicLayout extends Component {
               style={{ width: '100%', height: 'auto' }}
               src={require('../assets/logo.png')}
             />
-            <body
+            <div
               style={{
                 padding: 12,
                 background: '#FFF',
@@ -193,7 +313,7 @@ class BasicLayout extends Component {
               }}
             >
               <b>Make Our Customers Healthier And Wealthier!</b>
-            </body>
+            </div>
           </Content>
           <Footer
             style={{

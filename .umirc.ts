@@ -6,5 +6,10 @@ export default defineConfig({
   },
   routes: [
     { path: '/', component: '@/pages/index' },
+    {
+      exact: true,
+      path: '/positionDetails',
+      component: '@/pages/positionDetails',
+    },
   ],
 });
