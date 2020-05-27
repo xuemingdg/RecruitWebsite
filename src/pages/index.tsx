@@ -5,8 +5,11 @@ import { history } from 'umi';
 import { Layout, Row, Col, Card } from 'antd';
 import { UnorderedListOutlined } from '@ant-design/icons';
 
-const { Meta } = Card;
+import '@amap/amap-jsapi-types';
 
+import { Map, Marker } from 'react-amap';
+
+const { Meta } = Card;
 const { Header, Footer, Sider, Content } = Layout;
 
 class BasicLayout extends Component {
@@ -28,24 +31,25 @@ class BasicLayout extends Component {
             <Row type="flex">
               <Col span={22}>Prudential招聘(深圳)</Col>
               <Col span={2}>
-                <UnorderedListOutlined />
+                <UnorderedListOutlined style={{ fontSize: '20px' }} />
               </Col>
             </Row>
           </Header>
-          <Content style={{ margin: '10px 0px 0' }}>
-            <iframe
-              frameBorder="0"
-              src="https://v.qq.com/txp/iframe/player.html?vid=v0963nv6eq8"
-              id="video"
-              width="100%"
-              height="300"
-            ></iframe>
-            <script type="text/javascript">
-              document.getElementById("video").style.height=document.getElementById("video").scrollWidth*1.0+"px"
-            </script>
+          <Content style={{ margin: '0px 0px 0' }}>
+            <div style={{ width: '100vw', height: '56vw' }}>
+              <iframe
+                frameBorder="0"
+                src="https://v.qq.com/txp/iframe/player.html?vid=v0963nv6eq8"
+                id="video"
+                width="100%"
+                height="100%"
+              ></iframe>
+            </div>
             <div style={{ padding: 12, background: '#F5F5F5', color: '#000' }}>
-              {this.props.children}
-              Hot Positions
+              <div className={styles.line}></div>
+              <div style={{ display: 'inline-block', verticalAlign: 'middle' }}>
+                Hot Positions
+              </div>
             </div>
             <Row align="top">
               <Col span={6}>
@@ -267,8 +271,10 @@ class BasicLayout extends Component {
               </Col>
             </Row>
             <div style={{ padding: 12, background: '#F5F5F5', color: '#000' }}>
-              {this.props.children}
-              About Us
+              <div className={styles.line}></div>
+              <div style={{ display: 'inline-block', verticalAlign: 'middle' }}>
+                About us
+              </div>
             </div>
             <div style={{ padding: 12, background: '#FFF', color: '#000' }}>
               Founded in 1848, Prudential plc is an Asia-led portfolio of
@@ -294,10 +300,11 @@ class BasicLayout extends Component {
               look for new ways to solve challenging business and operational
               problems.
             </div>
-
             <div style={{ padding: 12, background: '#F5F5F5', color: '#000' }}>
-              {this.props.children}
-              Culture
+              <div className={styles.line}></div>
+              <div style={{ display: 'inline-block', verticalAlign: 'middle' }}>
+                Culture
+              </div>
             </div>
             <img
               alt=""
@@ -313,6 +320,21 @@ class BasicLayout extends Component {
               }}
             >
               <b>Make Our Customers Healthier And Wealthier!</b>
+            </div>
+            <div style={{ padding: 12, background: '#F5F5F5', color: '#000' }}>
+              <div className={styles.line}></div>
+              <div style={{ display: 'inline-block', verticalAlign: 'middle' }}>
+                Address
+              </div>
+            </div>
+            <div id="container" style={{ width: '100%', height: '300px' }}>
+              <Map
+                amapkey={'15be37512c7b14b6aab737e60df67b2a'}
+                zoom={16}
+                center={[113.94645, 22.515038]}
+              >
+                <Marker position={[113.94645, 22.515038]}></Marker>
+              </Map>
             </div>
           </Content>
           <Footer

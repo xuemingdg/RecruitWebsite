@@ -11,5 +11,15 @@ export default defineConfig({
       path: '/positionDetails',
       component: '@/pages/positionDetails',
     },
+    {
+      exact: true,
+      path: '/aboutUs',
+      component: '@/pages/aboutUs',
+    },
+    {
+      exact: true,
+      path: '/contact',
+      component: '@/pages/contact',
+    },
   ],
 });

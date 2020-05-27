@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 import styles from './index.less';
 
 import { history } from 'umi';
-import { Layout, Row, Col, Button } from 'antd';
+import { Layout, Row, Col, Button, Card } from 'antd';
+import {
+  HomeFilled,
+  PhoneFilled,
+  InfoCircleFilled,
+  RightCircleFilled,
+} from '@ant-design/icons';
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -1051,12 +1057,29 @@ export default class PageContent extends Component {
             height: 'auto',
           }}
         >
-          {/* <Row type="flex">
-              <Col span={6}><img src={require('../assets/icon1.png')}/></Col>
-              <Col span={6}><img src={require('../assets/icon2.png')}/></Col>
-              <Col span={6}><img src={require('../assets/icon3.png')}/></Col>
-              <Col span={6}><img src={require('../assets/icon4.png')}/></Col>
-            </Row> */}
+          <Row>
+            <Col span={6}>
+              <HomeFilled
+                style={{ fontSize: '30px' }}
+                onClick={() => history.goBack()}
+              />
+            </Col>
+            <Col span={6}>
+              <InfoCircleFilled
+                style={{ fontSize: '30px' }}
+                onClick={() => history.push('/aboutUs')}
+              />
+            </Col>
+            <Col span={6}>
+              <PhoneFilled
+                style={{ fontSize: '30px' }}
+                onClick={() => history.push('/contact')}
+              />
+            </Col>
+            <Col span={6}>
+              <RightCircleFilled style={{ fontSize: '30px' }} />
+            </Col>
+          </Row>
         </Header>
         <Content style={{ background: '#FFF', padding: 10 }}>
           <h1>{this.getTitle(codeVal)}</h1>
@@ -1084,7 +1107,11 @@ export default class PageContent extends Component {
           <div>{this.getCriteria(codeVal)}</div>
           <div style={{ textAlign: 'center' }}>
             {
-              <Button type="danger" shape="round">
+              <Button
+                type="danger"
+                shape="round"
+                onClick={() => history.push('/contact')}
+              >
                 投递简历
               </Button>
             }
