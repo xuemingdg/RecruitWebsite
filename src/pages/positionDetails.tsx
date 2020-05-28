@@ -12,6 +12,8 @@ import {
 
 const { Header, Footer, Sider, Content } = Layout;
 
+const { Meta } = Card;
+
 export default class PageContent extends Component {
   constructor(props) {
     super(props);
@@ -1059,25 +1061,51 @@ export default class PageContent extends Component {
         >
           <Row>
             <Col span={6}>
-              <HomeFilled
-                style={{ fontSize: '30px' }}
+              <Card
+                bordered={false}
+                className={styles.detailTab}
+                size={'small'}
                 onClick={() => history.goBack()}
-              />
+                cover={<HomeFilled style={{ fontSize: '30px' }} />}
+              >
+                <Meta title={<div>Index</div>} />
+              </Card>
             </Col>
             <Col span={6}>
-              <InfoCircleFilled
-                style={{ fontSize: '30px' }}
+              <Card
+                bordered={false}
+                className={styles.detailTab}
+                size={'small'}
                 onClick={() => history.push('/aboutUs')}
-              />
+                cover={<InfoCircleFilled style={{ fontSize: '30px' }} />}
+              >
+                <Meta title={<div>About Us</div>} />
+              </Card>
             </Col>
             <Col span={6}>
-              <PhoneFilled
-                style={{ fontSize: '30px' }}
+              <Card
+                bordered={false}
+                className={styles.detailTab}
+                size={'small'}
                 onClick={() => history.push('/contact')}
-              />
+                cover={<PhoneFilled style={{ fontSize: '30px' }} />}
+              >
+                <Meta title={<div>Contact Us</div>} />
+              </Card>
             </Col>
             <Col span={6}>
-              <RightCircleFilled style={{ fontSize: '30px' }} />
+              <Card
+                bordered={false}
+                className={styles.detailTab}
+                size={'small'}
+                onClick={() =>
+                  (window.location.href =
+                    'https://www.prudentialcorporation-asia.com/')
+                }
+                cover={<RightCircleFilled style={{ fontSize: '30px' }} />}
+              >
+                <Meta title={<div>Official Website</div>} />
+              </Card>
             </Col>
           </Row>
         </Header>

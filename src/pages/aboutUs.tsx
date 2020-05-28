@@ -25,7 +25,9 @@ export default class AboutInfoPage extends Component {
             }}
           >
             <Row type="flex">
-              <Col span={24}>Prudential Recruitment(Shenzhen)</Col>
+              <Col span={24} className={styles.headerText}>
+                Prudential Recruitment(Shenzhen)
+              </Col>
               <Col span={0}>
                 {/* <UnorderedListOutlined style={{ fontSize: '20px' }} /> */}
               </Col>
@@ -129,7 +131,7 @@ export default class AboutInfoPage extends Component {
             Index
           </Button>
           <Button type="link" className={styles.siderItem}>
-            Culture
+            About Us
           </Button>
           <Button
             type="link"

@@ -120,7 +120,7 @@ class BasicLayout extends Component {
             className={styles.siderItem}
             onClick={() => history.push('/aboutUs')}
           >
-            Culture
+            About Us
           </Button>
           <Button type="link" className={styles.siderItem}>
             Contact Us

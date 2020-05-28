@@ -54,7 +54,7 @@ class BasicLayout extends Component {
                 <Card
                   hoverable
                   bordered={false}
-                  style={{}}
+                  size={'small'}
                   cover={
                     <img
                       alt=""
@@ -76,7 +76,7 @@ class BasicLayout extends Component {
                 <Card
                   hoverable
                   bordered={false}
-                  style={{}}
+                  size={'small'}
                   cover={
                     <img
                       alt=""
@@ -98,7 +98,7 @@ class BasicLayout extends Component {
                 <Card
                   hoverable
                   bordered={false}
-                  style={{}}
+                  size={'small'}
                   cover={
                     <img
                       alt=""
@@ -120,7 +120,7 @@ class BasicLayout extends Component {
                 <Card
                   hoverable
                   bordered={false}
-                  style={{}}
+                  size={'small'}
                   cover={
                     <img
                       alt=""
@@ -144,7 +144,7 @@ class BasicLayout extends Component {
                 <Card
                   hoverable
                   bordered={false}
-                  style={{}}
+                  size={'small'}
                   cover={
                     <img
                       alt=""
@@ -166,7 +166,7 @@ class BasicLayout extends Component {
                 <Card
                   hoverable
                   bordered={false}
-                  style={{}}
+                  size={'small'}
                   cover={
                     <img
                       alt=""
@@ -186,7 +186,7 @@ class BasicLayout extends Component {
                 <Card
                   hoverable
                   bordered={false}
-                  style={{}}
+                  size={'small'}
                   cover={<img alt="" src={require('../assets/icon7.png')} />}
                   onClick={() => history.push('/positionDetails?code=7')}
                 >
@@ -203,7 +203,7 @@ class BasicLayout extends Component {
                 <Card
                   hoverable
                   bordered={false}
-                  style={{}}
+                  size={'small'}
                   cover={
                     <img
                       alt=""
@@ -227,7 +227,7 @@ class BasicLayout extends Component {
                 <Card
                   hoverable
                   bordered={false}
-                  style={{}}
+                  size={'small'}
                   cover={
                     <img
                       alt=""
@@ -249,7 +249,7 @@ class BasicLayout extends Component {
                 <Card
                   hoverable
                   bordered={false}
-                  style={{}}
+                  size={'small'}
                   cover={
                     <img
                       alt=""
@@ -372,7 +372,7 @@ class BasicLayout extends Component {
             className={styles.siderItem}
             onClick={() => history.push('/aboutUs')}
           >
-            Culture
+            About Us
           </Button>
           <Button
             type="link"
