@@ -55,13 +55,8 @@ class BasicLayout extends Component {
                   hoverable
                   bordered={false}
                   size={'small'}
-                  cover={
-                    <img
-                      alt=""
-                      src={require('../assets/icon1.png')}
-                      onClick={() => history.push('/positionDetails?code=1')}
-                    />
-                  }
+                  onClick={() => history.push('/positionDetails?code=1')}
+                  cover={<img alt="" src={require('../assets/icon1.png')} />}
                 >
                   <Meta
                     title={
@@ -77,13 +72,8 @@ class BasicLayout extends Component {
                   hoverable
                   bordered={false}
                   size={'small'}
-                  cover={
-                    <img
-                      alt=""
-                      src={require('../assets/icon2.png')}
-                      onClick={() => history.push('/positionDetails?code=2')}
-                    />
-                  }
+                  onClick={() => history.push('/positionDetails?code=2')}
+                  cover={<img alt="" src={require('../assets/icon2.png')} />}
                 >
                   <Meta
                     title={
@@ -99,13 +89,8 @@ class BasicLayout extends Component {
                   hoverable
                   bordered={false}
                   size={'small'}
-                  cover={
-                    <img
-                      alt=""
-                      src={require('../assets/icon3.png')}
-                      onClick={() => history.push('/positionDetails?code=3')}
-                    />
-                  }
+                  onClick={() => history.push('/positionDetails?code=3')}
+                  cover={<img alt="" src={require('../assets/icon3.png')} />}
                 >
                   <Meta
                     title={
@@ -121,13 +106,8 @@ class BasicLayout extends Component {
                   hoverable
                   bordered={false}
                   size={'small'}
-                  cover={
-                    <img
-                      alt=""
-                      src={require('../assets/icon4.png')}
-                      onClick={() => history.push('/positionDetails?code=4')}
-                    />
-                  }
+                  onClick={() => history.push('/positionDetails?code=4')}
+                  cover={<img alt="" src={require('../assets/icon4.png')} />}
                 >
                   <Meta
                     title={
@@ -145,13 +125,8 @@ class BasicLayout extends Component {
                   hoverable
                   bordered={false}
                   size={'small'}
-                  cover={
-                    <img
-                      alt=""
-                      src={require('../assets/icon5.png')}
-                      onClick={() => history.push('/positionDetails?code=5')}
-                    />
-                  }
+                  onClick={() => history.push('/positionDetails?code=5')}
+                  cover={<img alt="" src={require('../assets/icon5.png')} />}
                 >
                   <Meta
                     title={
@@ -167,13 +142,8 @@ class BasicLayout extends Component {
                   hoverable
                   bordered={false}
                   size={'small'}
-                  cover={
-                    <img
-                      alt=""
-                      src={require('../assets/icon6.png')}
-                      onClick={() => history.push('/positionDetails?code=6')}
-                    />
-                  }
+                  onClick={() => history.push('/positionDetails?code=6')}
+                  cover={<img alt="" src={require('../assets/icon6.png')} />}
                 >
                   <Meta
                     title={
@@ -187,8 +157,8 @@ class BasicLayout extends Component {
                   hoverable
                   bordered={false}
                   size={'small'}
-                  cover={<img alt="" src={require('../assets/icon7.png')} />}
                   onClick={() => history.push('/positionDetails?code=7')}
+                  cover={<img alt="" src={require('../assets/icon7.png')} />}
                 >
                   <Meta
                     title={
@@ -204,13 +174,8 @@ class BasicLayout extends Component {
                   hoverable
                   bordered={false}
                   size={'small'}
-                  cover={
-                    <img
-                      alt=""
-                      src={require('../assets/icon8.png')}
-                      onClick={() => history.push('/positionDetails?code=8')}
-                    />
-                  }
+                  onClick={() => history.push('/positionDetails?code=8')}
+                  cover={<img alt="" src={require('../assets/icon8.png')} />}
                 >
                   <Meta
                     title={
@@ -228,13 +193,8 @@ class BasicLayout extends Component {
                   hoverable
                   bordered={false}
                   size={'small'}
-                  cover={
-                    <img
-                      alt=""
-                      src={require('../assets/icon9.png')}
-                      onClick={() => history.push('/positionDetails?code=9')}
-                    />
-                  }
+                  onClick={() => history.push('/positionDetails?code=9')}
+                  cover={<img alt="" src={require('../assets/icon9.png')} />}
                 >
                   <Meta
                     title={
@@ -250,13 +210,8 @@ class BasicLayout extends Component {
                   hoverable
                   bordered={false}
                   size={'small'}
-                  cover={
-                    <img
-                      alt=""
-                      src={require('../assets/icon10.png')}
-                      onClick={() => history.push('/positionDetails?code=10')}
-                    />
-                  }
+                  onClick={() => history.push('/positionDetails?code=10')}
+                  cover={<img alt="" src={require('../assets/icon10.png')} />}
                 >
                   <Meta
                     title={
