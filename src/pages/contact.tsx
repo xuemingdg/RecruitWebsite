@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import styles from './index.less';
 
 import { history } from 'umi';
-import { Layout, Row, Col, Card } from 'antd';
+import { Layout, Row, Col, Card, Button } from 'antd';
 import { UnorderedListOutlined } from '@ant-design/icons';
 
 import '@amap/amap-jsapi-types';
@@ -16,9 +16,6 @@ class BasicLayout extends Component {
   render() {
     return (
       <Layout>
-        {/* <Sider width={256} collapsible style={{ background:'#696969', minHeight: '100vh', color: 'white', collapsible: 'true'}}>
-
-                </Sider> */}
         <Layout style={{ background: '#FFF' }}>
           <Header
             style={{
@@ -29,9 +26,11 @@ class BasicLayout extends Component {
             }}
           >
             <Row type="flex">
-              <Col span={22}>Prudential招聘(深圳)</Col>
-              <Col span={2}>
-                <UnorderedListOutlined style={{ fontSize: '20px' }} />
+              <Col span={24} className={styles.headerText}>
+                Prudential Recruitment(Shenzhen)
+              </Col>
+              <Col span={0}>
+                {/* <UnorderedListOutlined style={{ fontSize: '20px' }} /> */}
               </Col>
             </Row>
           </Header>
@@ -39,7 +38,7 @@ class BasicLayout extends Component {
             <img
               alt=""
               style={{ width: '100%', height: 'auto' }}
-              src={require('../assets/viewpoint.png')}
+              src={require('../assets/landscape.png')}
             />
 
             <div style={{ padding: 12, background: '#F5F5F5', color: '#000' }}>
@@ -92,6 +91,41 @@ class BasicLayout extends Component {
             https://www.prudentialcorporation-asia.com
           </Footer>
         </Layout>
+        <Sider
+          id="sider"
+          width={'30vw'}
+          collapsible
+          style={{
+            background: '#696969',
+            minHeight: '100vh',
+            color: 'white',
+            textAlign: 'center',
+            paddingTop: '12px',
+          }}
+          reverseArrow={true}
+          collapsedWidth={0}
+          defaultCollapsed
+          theme={'dark'}
+          zeroWidthTriggerStyle={{ top: '12px', background: '#FF7765' }}
+        >
+          <Button
+            type="link"
+            className={styles.siderItem}
+            onClick={() => history.push('')}
+          >
+            Index
+          </Button>
+          <Button
+            type="link"
+            className={styles.siderItem}
+            onClick={() => history.push('/aboutUs')}
+          >
+            Culture
+          </Button>
+          <Button type="link" className={styles.siderItem}>
+            Contact Us
+          </Button>
+        </Sider>
       </Layout>
     );
   }

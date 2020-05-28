@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import styles from './index.less';
 
 import { history } from 'umi';
-import { Layout, Row, Col, Card } from 'antd';
+import { Layout, Row, Col, Card, Button } from 'antd';
 import { UnorderedListOutlined } from '@ant-design/icons';
 
 import '@amap/amap-jsapi-types';
@@ -16,9 +16,6 @@ class BasicLayout extends Component {
   render() {
     return (
       <Layout>
-        {/* <Sider width={256} collapsible style={{ background:'#696969', minHeight: '100vh', color: 'white', collapsible: 'true'}}>
-
-                </Sider> */}
         <Layout style={{ background: '#FFF' }}>
           <Header
             style={{
@@ -26,12 +23,15 @@ class BasicLayout extends Component {
               textAlign: 'center',
               padding: 0,
               color: '#FFF',
+              width: '100%',
             }}
           >
             <Row type="flex">
-              <Col span={22}>Prudential招聘(深圳)</Col>
-              <Col span={2}>
-                <UnorderedListOutlined style={{ fontSize: '20px' }} />
+              <Col span={24} className={styles.headerText}>
+                Prudential Recruitment(Shenzhen)
+              </Col>
+              <Col span={0}>
+                {/* <UnorderedListOutlined style={{ fontSize: '20px' }} /> */}
               </Col>
             </Row>
           </Header>
@@ -45,11 +45,9 @@ class BasicLayout extends Component {
                 height="100%"
               ></iframe>
             </div>
-            <div style={{ padding: 12, background: '#F5F5F5', color: '#000' }}>
+            <div className={styles.subtitleContainer}>
               <div className={styles.line}></div>
-              <div style={{ display: 'inline-block', verticalAlign: 'middle' }}>
-                Hot Positions
-              </div>
+              <div className={styles.subtitle}>Hot Positions</div>
             </div>
             <Row align="top">
               <Col span={6}>
@@ -270,13 +268,11 @@ class BasicLayout extends Component {
                 </Card>
               </Col>
             </Row>
-            <div style={{ padding: 12, background: '#F5F5F5', color: '#000' }}>
+            <div className={styles.subtitleContainer}>
               <div className={styles.line}></div>
-              <div style={{ display: 'inline-block', verticalAlign: 'middle' }}>
-                About us
-              </div>
+              <div className={styles.subtitle}>About us</div>
             </div>
-            <div style={{ padding: 12, background: '#FFF', color: '#000' }}>
+            <div className={styles.paragraphText}>
               Founded in 1848, Prudential plc is an Asia-led portfolio of
               businesses focused on structural growth markets. The business
               helps individuals to de-risk their lives and deal with their
@@ -300,11 +296,9 @@ class BasicLayout extends Component {
               look for new ways to solve challenging business and operational
               problems.
             </div>
-            <div style={{ padding: 12, background: '#F5F5F5', color: '#000' }}>
+            <div className={styles.subtitleContainer}>
               <div className={styles.line}></div>
-              <div style={{ display: 'inline-block', verticalAlign: 'middle' }}>
-                Culture
-              </div>
+              <div className={styles.subtitle}>Culture</div>
             </div>
             <img
               alt=""
@@ -321,11 +315,9 @@ class BasicLayout extends Component {
             >
               <b>Make Our Customers Healthier And Wealthier!</b>
             </div>
-            <div style={{ padding: 12, background: '#F5F5F5', color: '#000' }}>
+            <div className={styles.subtitleContainer}>
               <div className={styles.line}></div>
-              <div style={{ display: 'inline-block', verticalAlign: 'middle' }}>
-                Address
-              </div>
+              <div className={styles.subtitle}>Address</div>
             </div>
             <div id="container" style={{ width: '100%', height: '300px' }}>
               <Map
@@ -355,6 +347,41 @@ class BasicLayout extends Component {
             https://www.prudentialcorporation-asia.com
           </Footer>
         </Layout>
+        <Sider
+          id="sider"
+          width={'30vw'}
+          collapsible
+          style={{
+            background: '#696969',
+            minHeight: '100vh',
+            color: 'white',
+            textAlign: 'center',
+            paddingTop: '12px',
+          }}
+          reverseArrow={true}
+          collapsedWidth={0}
+          defaultCollapsed
+          theme={'dark'}
+          zeroWidthTriggerStyle={{ top: '12px', background: '#FF7765' }}
+        >
+          <Button type="link" className={styles.siderItem}>
+            Index
+          </Button>
+          <Button
+            type="link"
+            className={styles.siderItem}
+            onClick={() => history.push('/aboutUs')}
+          >
+            Culture
+          </Button>
+          <Button
+            type="link"
+            className={styles.siderItem}
+            onClick={() => history.push('/contact')}
+          >
+            Contact Us
+          </Button>
+        </Sider>
       </Layout>
     );
   }

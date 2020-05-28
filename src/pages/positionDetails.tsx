@@ -109,7 +109,7 @@ export default class PageContent extends Component {
     switch (code) {
       case 1:
         output = (
-          <ul>
+          <ul className={styles.listText}>
             <li>
               Drive the detail design of technical solutions based on business
               requirements, technology roadmap and other constraints
@@ -151,7 +151,7 @@ export default class PageContent extends Component {
         break;
       case 2:
         output = (
-          <ul>
+          <ul className={styles.listText}>
             <li>
               Drive the detail design of technical solutions based on business
               requirements, technology roadmap and other constraints
@@ -203,7 +203,7 @@ export default class PageContent extends Component {
         break;
       case 3:
         output = (
-          <ul>
+          <ul className={styles.listText}>
             <li>
               Work with the product team to understand the requirements and
               create the corresponding technical documents, including
@@ -242,7 +242,7 @@ export default class PageContent extends Component {
         break;
       case 4:
         output = (
-          <ul>
+          <ul className={styles.listText}>
             <li>
               Implement DevOps automation for Enterprise systems and
               infrastructures
@@ -283,7 +283,7 @@ export default class PageContent extends Component {
         break;
       case 5:
         output = (
-          <ul>
+          <ul className={styles.listText}>
             <li>
               Drive the detail design of technical solutions based on business
               requirements, technology roadmap and other constraints
@@ -317,7 +317,7 @@ export default class PageContent extends Component {
         break;
       case 6:
         output = (
-          <ul>
+          <ul className={styles.listText}>
             <li>
               Gather and clarify business requirements to ensure proper
               development of test plans
@@ -357,7 +357,7 @@ export default class PageContent extends Component {
         break;
       case 7:
         output = (
-          <ul>
+          <ul className={styles.listText}>
             <li>
               Drive the detail design of technical solutions based on business
               requirements, technology roadmap and other constraints
@@ -399,7 +399,7 @@ export default class PageContent extends Component {
         break;
       case 8:
         output = (
-          <ul>
+          <ul className={styles.listText}>
             <li>
               Drive the detail design of technical solutions based on business
               requirements, technology roadmap and other constraints
@@ -441,7 +441,7 @@ export default class PageContent extends Component {
         break;
       case 9:
         output = (
-          <ul>
+          <ul className={styles.listText}>
             <li>
               Managing paid ad campaigns across search, display, social and
               retargeting networks by conducting extensive keyword research,
@@ -478,7 +478,7 @@ export default class PageContent extends Component {
         break;
       case 10:
         output = (
-          <ul>
+          <ul className={styles.listText}>
             <li>Performance Market Trainee & Intern</li>
             <li>Front End Development Trainee & Intern</li>
             <li>Backend Development Trainee & Intern</li>
@@ -499,7 +499,7 @@ export default class PageContent extends Component {
     switch (code) {
       case 1:
         output = (
-          <ul>
+          <ul className={styles.listText}>
             <li>
               Minimum 5+ years of proven work experience in web software
               development
@@ -562,7 +562,7 @@ export default class PageContent extends Component {
         break;
       case 2:
         output = (
-          <ul>
+          <ul className={styles.listText}>
             <li>
               Minimum 5+ years of proven work experience in web software
               development
@@ -620,7 +620,7 @@ export default class PageContent extends Component {
         break;
       case 3:
         output = (
-          <ul>
+          <ul className={styles.listText}>
             <li>
               Minimum 10+ years of proven work experience in software
               development
@@ -688,7 +688,7 @@ export default class PageContent extends Component {
         break;
       case 4:
         output = (
-          <ul>
+          <ul className={styles.listText}>
             <li>
               MMinimum 5+ years of proven work experience in system
               administration or DevOps
@@ -737,7 +737,7 @@ export default class PageContent extends Component {
         break;
       case 5:
         output = (
-          <ul>
+          <ul className={styles.listText}>
             <li>
               Minimum 5+ years of proven work experience in mobile software
               development
@@ -799,7 +799,7 @@ export default class PageContent extends Component {
         break;
       case 6:
         output = (
-          <ul>
+          <ul className={styles.listText}>
             <li>5+ years of software testing experience</li>
             <li>2+ years of hands on experience in building automated tests</li>
             <li>
@@ -847,7 +847,7 @@ export default class PageContent extends Component {
         break;
       case 7:
         output = (
-          <ul>
+          <ul className={styles.listText}>
             <li>
               Minimum 5+ years of proven work experience in web software
               development
@@ -910,7 +910,7 @@ export default class PageContent extends Component {
         break;
       case 8:
         output = (
-          <ul>
+          <ul className={styles.listText}>
             <li>
               Minimum 5+ years of proven work experience in web software
               development
@@ -973,7 +973,7 @@ export default class PageContent extends Component {
         break;
       case 9:
         output = (
-          <ul>
+          <ul className={styles.listText}>
             <li>
               You have a Bachelor Degree in marketing, business or equivalent
             </li>
@@ -1005,7 +1005,7 @@ export default class PageContent extends Component {
         break;
       case 10:
         output = (
-          <div>
+          <div className={styles.listText}>
             <b>Trainee:</b>
             <ul>
               <li>
@@ -1085,7 +1085,7 @@ export default class PageContent extends Component {
           <h1>{this.getTitle(codeVal)}</h1>
           <div style={{ marginBottom: 20 }}>2020-05-09</div>
 
-          <div>
+          <div className={styles.paragraphText}>
             At Prudential, we understand that success comes from the talent and
             commitment of our people. Together, we have a shared vision in
             securing the future of our customers and our communities. We strive
@@ -1098,7 +1098,7 @@ export default class PageContent extends Component {
           </div>
 
           <div className={styles.dividerTitle}>What we are looking for</div>
-          <div>{this.getInfo(codeVal)}</div>
+          <div className={styles.paragraphText}>{this.getInfo(codeVal)}</div>
 
           <div className={styles.dividerTitle}>What you will do</div>
           {this.getDuty(codeVal)}
@@ -1108,11 +1108,11 @@ export default class PageContent extends Component {
           <div style={{ textAlign: 'center' }}>
             {
               <Button
-                type="danger"
-                shape="round"
+                type="primary"
+                danger
                 onClick={() => history.push('/contact')}
               >
-                投递简历
+                简历投递
               </Button>
             }
           </div>
