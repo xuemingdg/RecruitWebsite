@@ -320,7 +320,7 @@ class BasicLayout extends Component {
           zeroWidthTriggerStyle={{ top: '12px', background: '#FF7765' }}
         >
           <Button type="link" className={styles.siderItem}>
-            Index
+            Homepage
           </Button>
           <Button
             type="link"

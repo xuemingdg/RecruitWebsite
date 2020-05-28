@@ -128,7 +128,7 @@ export default class AboutInfoPage extends Component {
             className={styles.siderItem}
             onClick={() => history.push('')}
           >
-            Index
+            Homepage
           </Button>
           <Button type="link" className={styles.siderItem}>
             About Us

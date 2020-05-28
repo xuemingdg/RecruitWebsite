@@ -111,7 +111,7 @@ class BasicLayout extends Component {
             className={styles.siderItem}
             onClick={() => history.push('')}
           >
-            Index
+            Homepage
           </Button>
           <Button
             type="link"

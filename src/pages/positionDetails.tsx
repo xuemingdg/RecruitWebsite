@@ -1068,7 +1068,7 @@ export default class PageContent extends Component {
                 onClick={() => history.goBack()}
                 cover={<HomeFilled style={{ fontSize: '30px' }} />}
               >
-                <Meta title={<div>Index</div>} />
+                <Meta title={<div>Homepage</div>} />
               </Card>
             </Col>
             <Col span={6}>
