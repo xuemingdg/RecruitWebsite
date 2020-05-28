@@ -41,11 +41,9 @@ class BasicLayout extends Component {
               src={require('../assets/landscape.png')}
             />
 
-            <div style={{ padding: 12, background: '#F5F5F5', color: '#000' }}>
+            <div className={styles.subtitleContainer}>
               <div className={styles.line}></div>
-              <div style={{ display: 'inline-block', verticalAlign: 'middle' }}>
-                Email
-              </div>
+              <div className={styles.subtitle}>Email</div>
             </div>
             <div
               style={{
@@ -53,15 +51,15 @@ class BasicLayout extends Component {
                 background: '#F5F5F5',
                 color: '#000',
                 textAlign: 'left',
+                fontSize: '16px',
               }}
             >
               christina.yi.yifen@prudential.com.hk
             </div>
-            <div style={{ padding: 12, background: '#F5F5F5', color: '#000' }}>
+
+            <div className={styles.subtitleContainer}>
               <div className={styles.line}></div>
-              <div style={{ display: 'inline-block', verticalAlign: 'middle' }}>
-                Address
-              </div>
+              <div className={styles.subtitle}>Address</div>
             </div>
             <div id="container" style={{ width: '100%', height: '300px' }}>
               <Map
